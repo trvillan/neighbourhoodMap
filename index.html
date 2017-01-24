@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Udacity Project- NeighbourhoodMap</title>
+
+    <!-- Font & Styles  -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Map -->
+    <div id="map" class="o-map"></div>
+
+    <!-- Control Panel -->
+    <div class="o-controlPanel">
+
+        <div class="c-searchBox">
+            <form>
+                <input id="searchBox" class="c-searchBox__textInput" type="text" placeholder="Search for places nearby..." data-bind="textInput: searchBox">
+            </form>
+
+        </div>
+
+        <div class="c-adminBox">
+            <div>
+                <button class="c-adminBox__s-resetButton" data-bind="click: resetSearchBox">Reset</button>
+            </div>
+            <button id="showButton" class="c-adminBox__s-showButton">Show List</button>
+            <button id="hideButton" class="c-adminBox__s-hideButton">Hide List</button>
+        </div>
+
+        <div id="c-listBox">
+            <ul data-bind="foreach: filteredPlaces" >
+                <li class="c-listBox__c-listItem" data-bind="click: $root.goToPlace">
+                    <span class="u-bold u-left" data-bind="text: name"></span> - <span class="u-italic" data-bind="text: category"></span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Resources -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view-model.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
