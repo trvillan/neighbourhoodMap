@@ -6,7 +6,7 @@ Date: Jan 17, 2017
 ## About
 * With this App you can search & find nice places in St.Andrews, Scotland
 
-## Libaries
+## Libraries / Frameworks
 * jQuery.js
 * Knockout.js
 
